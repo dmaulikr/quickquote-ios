@@ -1,10 +1,6 @@
 //
 //  Quote.swift
 //  QuickQuote
-//
-//  Created by Bruce Mcleod on 20/11/2014.
-//  Copyright (c) 2014 Bruce Mcleod. All rights reserved.
-//
 
 import Foundation
 
