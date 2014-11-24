@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		915F48251A1AF71500651B07 /* CarQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F48241A1AF71500651B07 /* CarQuoteViewController.swift */; };
 		91B71B3E1A22BB790047D8E7 /* features in Resources */ = {isa = PBXBuildFile; fileRef = 91B71B3D1A22BB790047D8E7 /* features */; };
-		91B71B401A22EC400047D8E7 /* cucumber.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91B71B3F1A22EC400047D8E7 /* cucumber.yml */; };
 		91C900DF1A19A64E00D10B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C900DE1A19A64E00D10B6F /* AppDelegate.swift */; };
 		91C900E11A19A64E00D10B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C900E01A19A64E00D10B6F /* ViewController.swift */; };
 		91C900E41A19A64E00D10B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C900E21A19A64E00D10B6F /* Main.storyboard */; };
@@ -218,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91B71B401A22EC400047D8E7 /* cucumber.yml in Resources */,
 				91E04FF31A1EE43800E8C958 /* CarInsuranceBackground.png in Resources */,
 				91C900E41A19A64E00D10B6F /* Main.storyboard in Resources */,
 				91E04FF11A1EE1DD00E8C958 /* background.jpg in Resources */,
