@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="Test" skipped="0" tests="1" time="19.457945">
+<testcase classname="Test" name="View correct premium for different combinations of age, gender, state etc (outline example : | 23 | male | New South Wales | 2000 | BMW | $55.54 |)" time="19.457945">
+  <system-out/>
+  <system-err/>
+</testcase>
+  <system-out>
+    <![CDATA[]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testsuite>
