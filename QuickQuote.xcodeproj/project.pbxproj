@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		915F48251A1AF71500651B07 /* CarQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F48241A1AF71500651B07 /* CarQuoteViewController.swift */; };
+		91B71B3E1A22BB790047D8E7 /* features in Resources */ = {isa = PBXBuildFile; fileRef = 91B71B3D1A22BB790047D8E7 /* features */; };
 		91C900DF1A19A64E00D10B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C900DE1A19A64E00D10B6F /* AppDelegate.swift */; };
 		91C900E11A19A64E00D10B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C900E01A19A64E00D10B6F /* ViewController.swift */; };
 		91C900E41A19A64E00D10B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C900E21A19A64E00D10B6F /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		915F48241A1AF71500651B07 /* CarQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarQuoteViewController.swift; sourceTree = "<group>"; };
+		91B71B3D1A22BB790047D8E7 /* features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = features; sourceTree = "<group>"; };
 		91C900D91A19A64E00D10B6F /* QuickQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C900DD1A19A64E00D10B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C900DE1A19A64E00D10B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		91C900D01A19A64E00D10B6F = {
 			isa = PBXGroup;
 			children = (
+				91B71B3D1A22BB790047D8E7 /* features */,
 				91C900DB1A19A64E00D10B6F /* QuickQuote */,
 				91C900F11A19A64E00D10B6F /* QuickQuoteTests */,
 				91C900DA1A19A64E00D10B6F /* Products */,
@@ -217,6 +220,7 @@
 				91E04FF11A1EE1DD00E8C958 /* background.jpg in Resources */,
 				91C900E91A19A64E00D10B6F /* LaunchScreen.xib in Resources */,
 				91C900E61A19A64E00D10B6F /* Images.xcassets in Resources */,
+				91B71B3E1A22BB790047D8E7 /* features in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
