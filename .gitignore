@@ -27,3 +27,4 @@ DerivedData
 
 # Cucumber
 reports/
+reports/*.xml
