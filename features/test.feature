@@ -13,3 +13,5 @@ Scenario Outline: View correct premium for different combinations of age, gender
       |  70  |  female  |  Victoria          | 2014	| Alfa Romeo       |  $137.51  |
       |  100 |  female  |  Queensland        | 2005 | Audi             |  $230.8   |
       |  18  |  female  |  Western Australia | 1999	| BMW              |  $51.73   |
+
+

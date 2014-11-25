@@ -1,1 +1,2 @@
-default: --format junit --out reports
+default: --format pretty
+junit: --format junit --out reports

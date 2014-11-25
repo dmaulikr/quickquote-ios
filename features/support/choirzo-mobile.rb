@@ -1,5 +1,6 @@
 require 'selenium-webdriver'
 require 'rubygems'
+require 'rspec'
 require 'appium_lib'
 
     server_url = "http://0.0.0.0:4723/wd/hub"
@@ -43,13 +44,12 @@ require 'appium_lib'
       
     end
   end
-  
+
   def invoke(control)
-    type = control.delete(:type)
-    
-    # need to support button, submit, link, image, radiobutton
-    element = @tester.find_element control
-    element.click
+      # bob = {:type => "text", :xpath => "//UIAApplication[1]/UIAWindow[1]/UIATextField[4]"}
+      type = control.delete(:type)
+      find_element(control).click
+      control[:type] = type
   end
   
   def getValue(control)
