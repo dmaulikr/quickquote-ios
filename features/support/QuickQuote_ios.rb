@@ -23,7 +23,7 @@ attr_accessor :btnGetACarQuote,:btnGetALifeQuote, :btnBack, :btnGetQuote, :txtYe
    
     @pikCarMake = {:type => "uipicker", :xpath => "//UIAApplication[1]/UIAWindow[2]/UIAPicker[1]/UIAPickerWheel[1]" }
   
-    @txtState = {:type => "text", :name => "State" }
+    @txtState = {:type => "text", :xpath => "//UIAApplication[1]/UIAWindow[1]/UIATextField[4]"}
     @pikState = {:type => "uipicker", :xpath => "//UIAApplication[1]/UIAWindow[2]/UIAPicker[1]/UIAPickerWheel[1]" }
   
   

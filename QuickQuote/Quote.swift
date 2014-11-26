@@ -5,11 +5,11 @@
 import Foundation
 
 
+
 class Quote
 {
     var type: String;
     var age: Int;
-    var email: String;
     var gender: String;
     var state: String;
     
@@ -17,11 +17,10 @@ class Quote
     var genders = ["male":"Male", "female":"Female"];
     var types = ["life":"Life Insurance", "car":"Car Insurance"];
     
-    init(type: String, age: Int, email: String, gender:String, state:String)
+    init(type: String, age: Int, gender:String, state:String)
     {
         self.type = type;
         self.age = age;
-        self.email = email;
         self.gender = gender;
         self.state = state;
     }
@@ -49,12 +48,12 @@ class CarQuote : Quote
     var year: Int;
     
     
-    init(age: Int, email: String, gender:String, state:String, make:String, year:Int)
+    init(age: Int, gender:String, state:String, make:String, year:Int)
     {
         
         self.make = make;
         self.year = year;
         
-        super.init(type: "car", age: age, email: email, gender: gender, state: state);
+        super.init(type: "car", age: age, gender: gender, state: state);
     }
 }

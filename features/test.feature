@@ -6,7 +6,6 @@ Scenario Outline: View correct premium for different combinations of age, gender
      When I submit my  details '<age>', '<gender>', '<state>', '<year>' & '<make>' for a car insurance quote
      Then I should see the correct '<premium>' shown
 
-
     Examples:
       |  age |  gender  |  state             | year | make             |  premium  |
       |  23  |  male    |  New South Wales   | 2000	| BMW              |  $55.54   |

@@ -9,6 +9,7 @@
 import UIKit
 import XCTest
 
+
 class QuickQuoteTests: XCTestCase {
     
     override func setUp() {
@@ -22,8 +23,14 @@ class QuickQuoteTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        var expected = 35.74;
+        var result = getCarQuote(13, gender: "male", state: "nsw", make: "bmw", year: 2004);
+        XCTAssertEqual(result, expected, "car quote did not match expected value.");
+    }
+
+    func getCarQuote(age: Int, gender: String, state: String, make: String, year: Int) -> Double{
+        var quote = CarQuote(age: age, gender: gender, state: state, make: make, year: year);
+        return CarPremiumCalculator().getPremiumForQuote(quote);
     }
     
     func testPerformanceExample() {

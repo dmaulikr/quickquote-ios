@@ -15,18 +15,11 @@ When(/^I submit my  details '(\d+)', '(.*?)', '(.*?)', '(.*?)' & '(.*?)' for a c
   
   
   invoke(quickquote.txtCarMake)
-  # find_element(:xpath, "//UIAApplication[1]/UIAWindow[1]/UIATextField[1]").click
   setValue(quickquote.pikCarMake,make)
   invoke(quickquote.btnDone)
 
 # select the state
-  bob = {:type => "text", :xpath => "//UIAApplication[1]/UIAWindow[1]/UIATextField[4]"}
-  invoke(bob)
- 
- # type = bob.delete(:type)
- # find_element(bob).click
- # bob[:type] = type
-  
+  invoke(quickquote.txtState)
   setValue(quickquote.pikState,state)
   invoke(quickquote.btnDone)
 

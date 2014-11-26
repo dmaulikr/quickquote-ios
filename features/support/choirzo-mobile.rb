@@ -36,9 +36,7 @@ require 'appium_lib'
       when "text+tap" then
         element.send_keys value
         hide_keyboard
-       #element.set_value value
 
-       #element.set_value value
       else
         puts 'WARNING: Control type not defined.'
       
@@ -46,7 +44,6 @@ require 'appium_lib'
   end
 
   def invoke(control)
-      # bob = {:type => "text", :xpath => "//UIAApplication[1]/UIAWindow[1]/UIATextField[4]"}
       type = control.delete(:type)
       find_element(control).click
       control[:type] = type
