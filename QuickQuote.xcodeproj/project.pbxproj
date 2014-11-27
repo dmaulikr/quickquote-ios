@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		915F48251A1AF71500651B07 /* CarQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F48241A1AF71500651B07 /* CarQuoteViewController.swift */; };
+		9164A5041A26D76D003481E6 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 9164A5031A26D76D003481E6 /* Rakefile */; };
 		916F34151A257F9D00187456 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E04FE61A1D589900E8C958 /* Quote.swift */; };
 		916F34161A257F9D00187456 /* CarQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915F48241A1AF71500651B07 /* CarQuoteViewController.swift */; };
 		916F341A1A25850500187456 /* CarPremiumCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F34191A25850500187456 /* CarPremiumCalculator.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		915F48241A1AF71500651B07 /* CarQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarQuoteViewController.swift; sourceTree = "<group>"; };
+		9164A5031A26D76D003481E6 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		916F34191A25850500187456 /* CarPremiumCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPremiumCalculator.swift; sourceTree = "<group>"; };
 		916F34271A25960E00187456 /* Appium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Appium.swift; path = ../Appium.swift; sourceTree = "<group>"; };
 		91B71B3D1A22BB790047D8E7 /* features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = features; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				91B71B3F1A22EC400047D8E7 /* cucumber.yml */,
+				9164A5031A26D76D003481E6 /* Rakefile */,
 				91B71B3D1A22BB790047D8E7 /* features */,
 				91C900DB1A19A64E00D10B6F /* QuickQuote */,
 				91C900F11A19A64E00D10B6F /* QuickQuoteTests */,
@@ -232,6 +235,7 @@
 				91C900E91A19A64E00D10B6F /* LaunchScreen.xib in Resources */,
 				91C900E61A19A64E00D10B6F /* Images.xcassets in Resources */,
 				91B71B3E1A22BB790047D8E7 /* features in Resources */,
+				9164A5041A26D76D003481E6 /* Rakefile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
