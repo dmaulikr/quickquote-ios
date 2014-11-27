@@ -5,13 +5,19 @@
 
 import Foundation
 
+extension Double {
+    func format(f: String) -> String {
+        return NSString(format: "%\(f)f", self)
+    }
+}
+
 class CarPremiumCalculator
 {
     var basePremium = 10.0;
-    var genderFactors = ["male":1.25,"female":1.15];
+    var genderFactors = ["Male":1.25,"Female":1.15];
     var ageFactor = 1.2;
-    var stateFactors = ["nsw":1.1,"vic":1.2,"sa":1.3,"wa":1.4,"tas":1.5,"qld":1.6];
-    var makeFactors = ["audi":1.0,"alfa":1.1,"bmw":1.2,"lexus":1.3,"toyota":1.4,"vw":1.5];
+    var stateFactors = ["New South Wales":1.1,"Victoria":1.2,"South Australia":1.3,"Western Australia":1.4,"Tasmania":1.5,"Queensland":1.6];
+    var makeFactors = ["Audi":1.0,"Alfa Romeo":1.1,"BMW":1.2,"lexus":1.3,"Toyota":1.4,"Volkswagen":1.5];
     
     
     init() {}
@@ -24,9 +30,10 @@ class CarPremiumCalculator
     
     func getPremiumForQuoteAsString(quote: CarQuote) -> String
     {
-        let premium = getPremiumForQuote(quote);
+        let premium = getPremiumForQuote(quote).format((".2"));
         let formattedPremium = "$\(premium)";
         return formattedPremium;
     }
+    
     
 }

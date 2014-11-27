@@ -14,13 +14,16 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var yearOfManufacture: UITextField!
     @IBOutlet weak var ageOfDriver: UITextField!
     @IBOutlet weak var stateOfResidence: UITextField!
-    @IBOutlet weak var driversEmailAddress: UITextField!
-    
-    @IBOutlet weak var premium: UILabel!
-   
+     
+    @IBOutlet weak var genderOfDriver: UISegmentedControl!
+
+    @IBOutlet weak var getQuote: UIButton!
     @IBAction func getQuote(sender: UIButton) {
         CalculateQuote();
     }
+    
+    @IBOutlet weak var premium: UILabel!
+   
     
     let carMakesArray = ["Audi","Alfa Romeo","BMW","Lexus", "Toyota", "Volkswagen"];
     let statesArray = ["New South Wales","Queensland","South Australia","Tasmania", "Victoria", "Western Australia"];
@@ -35,14 +38,21 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
         let inputAccessoryView = UIToolbar(frame:CGRect(x: 150, y: 50, width: 100, height: 40));
         let stateInputAccessoryView = UIToolbar(frame:CGRect(x: 150, y: 50, width: 100, height: 40));
+        let ageInputAccessoryView = UIToolbar(frame:CGRect(x: 150, y: 50, width: 100, height: 40));
+        let yearInputAccessoryView = UIToolbar(frame:CGRect(x: 150, y: 50, width: 100, height: 40));
         
-        var a = UIBarButtonItem(title: "Done", style: .Plain, target: self, action:"ClickedMakeOfCarDone");
-        var b = UIBarButtonItem(title: "Done", style: .Plain, target: self, action:"ClickedStateDone");
+        var flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil);
+        
+        var makeOfCarDone = UIBarButtonItem(title: "Done", style: .Plain, target: self, action:"ClickedMakeOfCarDone");
+        var stateDone = UIBarButtonItem(title: "Done", style: .Plain, target: self, action:"ClickedStateDone");
+        var ageDone = UIBarButtonItem(title: "Done", style: .Plain, target: self, action:"ClickedAgeDone");
+        var yearDone = UIBarButtonItem(title: "Done", style: .Plain, target: self, action:"ClickedYearDone");
 
-        inputAccessoryView.setItems([a], animated: false);
-        stateInputAccessoryView.setItems([b], animated: false);
         
-        
+        inputAccessoryView.setItems([flexibleSpace,makeOfCarDone], animated: false);
+        stateInputAccessoryView.setItems([flexibleSpace,stateDone], animated: false);
+        ageInputAccessoryView.setItems([flexibleSpace,ageDone], animated: false);
+        yearInputAccessoryView.setItems([flexibleSpace,yearDone], animated: false);
         
         carMakePicker.dataSource = self;
         carMakePicker.delegate = self;
@@ -57,10 +67,12 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
         stateOfResidence.inputAccessoryView = stateInputAccessoryView;
         stateOfResidence.inputView = statePicker;
         
-        self.ageOfDriver.delegate = self;
-        self.yearOfManufacture.delegate = self;
-        self.driversEmailAddress.delegate = self;
-    
+        ageOfDriver.inputAccessoryView = ageInputAccessoryView;
+        ageOfDriver.delegate = self;
+        
+        yearOfManufacture.inputAccessoryView = yearInputAccessoryView;
+        yearOfManufacture.delegate = self;
+        
         
         premium.hidden = true;
 
@@ -79,6 +91,16 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
         stateOfResidence.resignFirstResponder();
     }
     
+    func ClickedAgeDone()
+    {
+        ageOfDriver.resignFirstResponder();
+    }
+    
+    func ClickedYearDone()
+    {
+        yearOfManufacture.resignFirstResponder();
+    }
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true);
         self.navigationController?.title = "QuickQuote";
@@ -94,11 +116,53 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     func CalculateQuote()
     {
-        premium.hidden = false;
-        var quote = CarQuote(age:23,gender:"male",state:"nsw",make:"bmw",year:2004);
+        var calculate = false;
         
-        premium.text = CarPremiumCalculator().getPremiumForQuoteAsString(quote);
-        premium.accessibilityLabel = premium.text;
+        var age = ageOfDriver.text.toInt();
+        var state = stateOfResidence.text;
+        var make = makeOfCar.text;
+        var year = yearOfManufacture.text.toInt();
+        var gender = "Male";
+        
+        switch genderOfDriver.selectedSegmentIndex
+        {
+          case 0:
+            gender = "Male";
+            break;
+            
+        case 1:
+            gender = "Female";
+            break;
+        
+        default:
+            break;
+        }
+        
+        
+        // Only perfom the calculation if the validation rules have been passed
+        if (
+            
+            age > 0 &&
+            state != "" &&
+            make != "" &&
+            year > 0
+            
+            )
+        {
+            var quote = CarQuote(age: age!,gender:gender,state: state ,make: make,year: year!);
+            
+            premium.text = CarPremiumCalculator().getPremiumForQuoteAsString(quote);
+            premium.accessibilityLabel = premium.text;
+            premium.hidden = false;
+        }
+        else
+        {
+            premium.text = "$00.00";
+            premium.accessibilityLabel = premium.text;
+            premium.hidden = true;
+        }
+        
+
     }
     
     

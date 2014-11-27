@@ -13,9 +13,6 @@ class Quote
     var gender: String;
     var state: String;
     
-    var states = ["nsw":"New South Wales", "vic":"Victoria", "tas":"Tasmania", "wa":"Western Australia", "sa":"South Australia", "qld":"Queensland"];
-    var genders = ["male":"Male", "female":"Female"];
-    var types = ["life":"Life Insurance", "car":"Car Insurance"];
     
     init(type: String, age: Int, gender:String, state:String)
     {
@@ -25,25 +22,11 @@ class Quote
         self.state = state;
     }
     
-    func namedState() -> String
-    {
-        return states[state]!;
-    }
-    
-    func namedGender() -> String
-    {
-        return genders[gender]!;
-    }
-    
-    func namedType() -> String
-    {
-        return types[type]!;
-    }
+
 }
 
 class CarQuote : Quote
 {
-    var makes = ["audi":"Audi", "alfa":"Alfa Romeo", "bmw":"BMW", "lexus":"Lexus", "toyota":"Toyota", "vw":"Volkswagen"];
     var make: String;
     var year: Int;
     

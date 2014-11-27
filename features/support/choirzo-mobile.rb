@@ -29,13 +29,12 @@ require 'appium_lib'
 
          
       # Text boxes
-      when "text" then
+      when "text"
+        element.send_keys value
+      
+      when "text+return" then
         element.send_keys value
         hide_keyboard( "Return" )
-
-      when "text+tap" then
-        element.send_keys value
-        hide_keyboard
 
       else
         puts 'WARNING: Control type not defined.'

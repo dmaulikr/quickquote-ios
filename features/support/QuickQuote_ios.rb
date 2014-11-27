@@ -1,6 +1,6 @@
 class Quickquoteios
 
-attr_accessor :btnGetACarQuote,:btnGetALifeQuote, :btnBack, :btnGetQuote, :txtYear, :txtAge, :txtEmail, :txtPrice, :txtCarMake, :neil, :pikCarMake, :txtState, :pikState,:btnDone
+attr_accessor :btnGetACarQuote,:btnGetALifeQuote, :btnBack, :btnGetQuote, :txtYear, :txtAge, :txtEmail,:btnMale, :btnFemale, :txtPrice, :txtCarMake, :neil, :pikCarMake, :txtState, :pikState,:btnDone
 
   def initialize
     
@@ -12,9 +12,11 @@ attr_accessor :btnGetACarQuote,:btnGetALifeQuote, :btnBack, :btnGetQuote, :txtYe
 
     @btnGetQuote = {:type => "button", :name => "Get Quote" }
 
-    @txtYear = {:type => "text+tap", :name => "Year" }
+    @txtYear = {:type => "text", :name => "Year" }
     @txtAge = {:type => "text", :name => "Age" }
     @txtEmail = {:type => "text", :name => "Email" }
+    @btnMale = {:type => "button", :name => "Male" }
+    @btnFemale = {:type => "button", :name => "Female" }
     
     @txtPrice = {:type => "text", :xpath => "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[1]" }
    

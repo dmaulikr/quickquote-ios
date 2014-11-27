@@ -8,25 +8,31 @@ end
 
 When(/^I submit my  details '(\d+)', '(.*?)', '(.*?)', '(.*?)' & '(.*?)' for a car insurance quote$/) do | age, gender, state, year, make |
   
-
-
-  # Select the make of car
-  #TODO: fix invoke
-  
-  
+  # Select the car make
   invoke(quickquote.txtCarMake)
   setValue(quickquote.pikCarMake,make)
   invoke(quickquote.btnDone)
 
-# select the state
+  # Set age
+  setValue(quickquote.txtAge, age)
+  invoke(quickquote.btnDone)
+
+  # Set the year
+  setValue(quickquote.txtYear, year)
+  invoke(quickquote.btnDone)
+  
+  # select the state
   invoke(quickquote.txtState)
   setValue(quickquote.pikState,state)
   invoke(quickquote.btnDone)
 
 
-  #setValue(quickquote.State,state)
-  # setValue(quickquote.txtEmail,"test@example.com")
-
+ # select the gender
+  if gender == "male" then
+    invoke(quickquote.btnMale)
+  else
+    invoke(quickquote.btnFemale)
+  end
   invoke(quickquote.btnGetQuote)
   invoke(quickquote.btnBack)
 
