@@ -1,4 +1,4 @@
-Feature: Test
+Feature: Tests
 
 Scenario Outline: View correct premium for different combinations of age, gender, state etc
 
