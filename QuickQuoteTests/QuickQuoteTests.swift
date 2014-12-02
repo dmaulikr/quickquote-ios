@@ -24,7 +24,7 @@ class QuickQuoteTests: XCTestCase {
     
     func testExample() {
         var expected = 35.74;
-        var result = getCarQuote(13, gender: "male", state: "nsw", make: "bmw", year: 2004);
+        var result = getCarQuote(13, gender: "Male", state: "New South Wales", make: "BMW", year: 2004);
         XCTAssertEqual(result, expected, "car quote did not match expected value.");
     }
 
@@ -37,6 +37,8 @@ class QuickQuoteTests: XCTestCase {
         // This is an example of a performance test case.
         self.measureBlock() {
             // Put the code you want to measure the time of here.
+            var expected = 35.74;
+            var result = self.getCarQuote(13, gender: "Male", state: "New South Wales", make: "BMW", year: 2004);
         }
     }
     
