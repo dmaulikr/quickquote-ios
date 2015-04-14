@@ -109,9 +109,9 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true);    }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true);
-    }
+//  override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+//     self.view.endEditing(true);
+//  }
     
     
     func CalculateQuote()
@@ -188,7 +188,7 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
     }
     
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         
         if (pickerView == carMakePicker)
         {
@@ -202,7 +202,7 @@ class CarQuoteViewController: UIViewController, UIPickerViewDataSource, UIPicker
     }
 
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {
         textField.resignFirstResponder();
         return true;
